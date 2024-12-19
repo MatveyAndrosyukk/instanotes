@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+* {
+    box-sizing: border-box;
+}
+  
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.header{
+    display: flex;
+    width: 100vw;
+    border-bottom: 1px solid #D6D9DC;
+    padding-bottom: 5px;
+}
+
+.container{
+    width: 1200px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.header__content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo__image img{
+    width: 70px;
+}
+
+.logo__text{
+    font-family: "Ubuntu", serif;
+    font-weight:600;
+    font-style: normal;
+    color: #292929;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.logo__text span{
+    color: #E17824;
+}
+
+.orange_button{
+    display: block;
+    height: 100%;
+    animation: hue-rotate 10s linear infinite;
+}
+
+  
+.button {
+    -webkit-font-smoothing: antialiased;
+    background-color: #222;
+    border: none;
+    color: #fff;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    text-decoration: none;
+    user-select: none;
+    letter-spacing: 1px;
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: all 0.1s ease-out;
+  
+    &:hover {
+      background-color: #E17824;
+      color: #fff;
+    }
+    
+    &:active {
+      transform: scale(0.95);
+    }
+  
+    &--bubble {
+      position: relative;
+      z-index: 2;
+      color: white;
+      background: none;
+  
+      &:hover {
+        background-color: none;
+      }
+  
+      &:hover + .button--bubble__effect-container .circle {
+        background: darken(#E17824, 15%);
+      }
+  
+      &:hover + .button--bubble__effect-container .button {
+        background: darken(#E17824, 15%);
+      }
+  
+      &:active + .button--bubble__effect-container {
+        transform: scale(0.95);
+      }
+  
+      &__container {
+        position: relative;
+        display: inline-block;
+  
+        .effect-button {
+          position: absolute;
+          width: 50%;
+          height: 25%;
+          top: 50%;
+          left: 25%;
+          z-index: 1;
+          transform: translateY(-50%);
+          background: #222;
+          transition: background-color 0.1s ease-out;
+        }
+      }
+    }
+  }
+  
+  .button--bubble__effect-container {
+    position: absolute;
+    display: block;
+    width: 200%;
+    height: 400%;
+    top: -150%;
+    left: -50%;
+    -webkit-filter: url("#goo");
+    filter: url("#goo");
+    transition: all 0.1s ease-out;
+    pointer-events: none;
+  
+    .circle {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border-radius: 15px;
+      background: #222;
+      transition: background-color 0.1s ease-out;
+  
+      &.top-left {
+          top: 40%;
+          left: 27%;
+      }
+  
+      &.bottom-right {
+          bottom: 40%;
+          right: 27%;
+      }
+    }
+  }
+  
+  .goo {
+    position: absolute;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .button--bubble__container {
+    top: 50%;
+    margin-top: -25px;
+  }
+  
+  @keyframes hue-rotate {
+        from {
+          -webkit-filter: hue-rotate(0);
+          -moz-filter: hue-rotate(0);
+          -ms-filter: hue-rotate(0);
+          filter: hue-rotate(0);
+        }
+        to {
+          -webkit-filter: hue-rotate(360deg);
+          -moz-filter: hue-rotate(360deg);
+          -ms-filter: hue-rotate(360deg);
+          filter: hue-rotate(360deg);
+        }
+  }
