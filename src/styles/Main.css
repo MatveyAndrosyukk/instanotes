@@ -1,0 +1,66 @@
+.main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_container{
+    flex-grow: 1;
+    display: flex;
+}
+
+.file_tree{
+    min-width: 345px;
+    border-left: 1px solid #E4E7EC;
+    border-right: 1px solid #E4E7EC;
+    padding-left: 20px;
+    padding-right: 18px;
+    padding-top: 10px;
+}
+
+.opened_file{
+    flex-grow: 1;
+    border-right: 1px solid #E4E7EC;
+}
+
+.file_tree_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main_button{
+    background-color: #E8F5FF;
+    height: 29.06px;
+    border-radius: 4.69px;
+    padding: 9px;
+    box-shadow: 
+        inset -0.56px 0 0 #18A0FB,
+        inset 0.56px 0 0 #18A0FB,
+        inset 0 -0.56px 0 #18A0FB,
+        inset 0 0.56px 0 #18A0FB;
+    cursor: pointer;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #18A0FB;
+    font-size: 11.14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download_button{
+    width: 117.31px;
+    margin-top: 13px;
+}
+
+.file_tree_text{
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24.96px;
+    color: #18A0FB;
+}
